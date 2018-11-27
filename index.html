@@ -1,0 +1,306 @@
+<!doctype html>
+ <html lang=en>
+ <body background="images/food.png">
+
+    <head>
+      <title> SubstiSoup! </title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/home.css">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-512x512.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <p>Welcome User!</p>
+    <p>Not user?<a href="signup.html"> Sign Up!</a></p>
+
+    <body>
+      <div class="container">
+        <div class="jumbotron mb-2 text-dark text-left" style="background: url(images/baking-bread.jpg)">
+
+          <a href="home.html">
+            <img src="images/brand.png" alt="Brand Icon"
+          style="width:310px;height:130px;border:0"></a>
+
+
+        </div> <!-- end of jumbotron -->
+
+        <div class="container" id="question-form">
+          <div class="row mt-5">
+            <h1>Ask A Question About Substitutions!</h1>
+          </div> <!-- End of row 1-->
+          <div class="row mt-3">
+            <div class="form-group ">
+              <label for="question">What's a good substitute for: </label>
+              <input type="answer" class="form-control" id="question" placeholder="Ask Here!">
+              <!--<input type="text" class="form-control" id="question">-->
+            </div>
+            </div>
+          <div class="row">
+              <a class="btn btn-primary btn-lg mt-3 text-light" id="postButton" role="button">Post!</a>
+              <div id="snackbar"> Question Posted! </div>
+          </div>
+
+        </div>
+
+        <div class="container my-5" id="MyQuestions">
+          <div class="row mt-5">
+            <h1 class="text-center">Open Questions</h1>
+          </div> <!-- End of row 1-->
+
+
+          <div class="form-group row mt-3">
+            <h4>What's a good substitute for beef?</h4>
+          </div> <!-- End of row 2 -->
+
+        <!-- Carousel 1 -->
+        <div class="container" style="margin-bottom:30px; max-width:500px;height:400px;text-align:center">
+            <div id="carouselBeef" class="carousel slide" data-ride="carousel" style="max-width:500px;height:400px;text-align:center" data-interval="5000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselBeef" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselBeef" data-slide-to="1"></li>
+                    <li data-target="#carouselBeef" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="http://www.glowkitchen.com/2012/12/vegan-substitute-for-ground-beef/" target="_blank">
+                        <img class="d-block w-100" src="images/tofubeef.jpg" alt="Tofu Recipe [500x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>TOFU</h4>
+                            <h6>Tofu substitute for ground beef</h6>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://food52.com/recipes/61258-savory-tempeh-crumbles" target="_blank">
+                        <img class="d-block w-100" src="images/tempehbeef.jpg" alt="Tempeh Recipe [500x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>TEMPEH</h4>
+                            <h6>Tempeh substitute for ground beef</h6>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://fountainavenuekitchen.com/mushroom-ground-beef/" target="_blank">
+                        <img class="d-block w-100" src="images/mushbeef.jpg" alt="Mushroom Recipe [500x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>MUSHROOMS</h4>
+                            <h6>Mushroom substitute for ground beef</h6>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselBeef" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselBeef" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+          <div class="row">
+            <input type="answer" class="form-control" id="answer1" placeholder="Add Your Answer Here!">
+            <div class="mt-2" id="buttons">
+              <btn class="btn btn-primary btn-sm" id="beefPost"> Post </btn>
+              <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results1" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
+            </div>
+            <!--Collapsed Data -->
+            <div class="collapse mt-2" id="results1">
+              <div class="card card-body">
+                <ul class="list-group" id="beefList">
+                  <li class="list-group-item">Tofu</li>
+                  <li class="list-group-item">Tempeh</li>
+                  <li class="list-group-item">Mushrooms</li>
+                  <li class="list-group-item">Lentils</li>
+                  <li class="list-group-item">Jackfruit</li>
+                </ul>
+              </div>
+            </div> <!-- end of collapsed Data -->
+          </div>
+
+          <div class="form-group row mt-3">
+            <h4>What's a good substitute for celery?</h4>
+          </div>
+
+        <!-- Carousel 2 -->
+        <div class="container" style="margin-bottom:30px; max-width:500px;height:400px;text-align:center">
+            <div id="carouselCelery" class="carousel slide" data-ride="carousel" style="max-width:500px;height:400px;text-align:center" data-interval="5000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselCelery" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselCelery" data-slide-to="1"></li>
+                    <li data-target="#carouselCelery" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="https://chewtheworld.com/substitute-for-celery/#tab-con-2" target="_blank">
+                        <img class="d-block w-100" src="images/carrotcel.jpg" alt="Carrot Recipe [600x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>CARROTS</h5>
+                            <p>Carrot substitute for celery</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://chewtheworld.com/substitute-for-celery/#tab-con-7" target="_blank">
+                        <img class="d-block w-100" src="images/cabbagecel.jpg" alt="Cabbage Recipe [600x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>CABBAGE</h5>
+                            <p>Cabbage substitute for celery</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.thekitchn.com/recipes-to-use-up-a-bunch-of-dill-200413" target="_blank">
+                        <img class="d-block w-100" src="images/dillcel.jpg" alt="Dill Recipe [600x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>DILL</h5>
+                            <p>Dill substitute for celery</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselCelery" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselCelery" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+
+          <div class="row">
+            <input type="answer" class="form-control" id="answer2" placeholder="Add Your Answer Here!">
+            <div class="mt-2" id="buttons">
+              <btn class="btn btn-primary btn-sm" id="celeryPost"> Post </btn>
+              <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results2" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
+            </div>
+            <!--Collapsed Data -->
+            <div class="collapse mt-2" id="results2">
+              <div class="card card-body">
+                <ul class="list-group" id="celeryList">
+                  <li class="list-group-item">Carrots</li>
+                  <li class="list-group-item">Cabbage</li>
+                  <li class="list-group-item">Dill</li>
+                  <li class="list-group-item">Parsley</li>
+                  <li class="list-group-item">Bok Choy</li>
+                </ul>
+              </div>
+            </div> <!-- end of collapsed Data -->
+          </div><!-- End of row 3 -->
+
+          <div class="form-group row mt-3">
+            <h4>What's a good substitute for salt?</h4>
+          </div>
+
+        <!-- Carousel 3 -->
+        <div class="container" style="margin-bottom:30px; max-width:500px;height:400px;text-align:center">
+            <div id="carouselSalt" class="carousel slide" data-ride="carousel" style="max-width:500px;height:400px;text-align:center" data-interval="5000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselSalt" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselSalt" data-slide-to="1"></li>
+                    <li data-target="#carouselSalt" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="https://www.fruitsandveggiesmorematters.org/use-lemons-instead-salt" target="_blank">
+                        <img class="d-block w-100" src="images/lemonsalt.jpg" alt="Lemon Juice Recipe [600x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>LEMON JUICE</h5>
+                            <p>Lemon juice substitute for salt</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.bhf.org.uk/informationsupport/heart-matters-magazine/nutrition/herbs-and-spices" target="_blank">
+                        <img class="d-block w-100" src="images/herbsalt.jpg" alt="Fresh Herbs Recipe [600x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>FRESH HERBS</h5>
+                            <p>Fresh Herb substitute for salt</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.onegreenplanet.org/vegan-food/trying-to-skip-salt-heres-what-to-use-instead/" target="_blank">
+                        <img class="d-block w-100" src="images/peppersalt.jpg" alt="Pepper Recipe [600x400]" style="max-width:500px;height:400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>PEPPER</h5>
+                            <p>Pepper substitute for salt</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselSalt" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselSalt" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+          <div class="row">
+              <input type="answer" class="form-control" id="answer3" placeholder="Add Your Answer Here!">
+              <div class="mt-2" id="buttons">
+                <btn class="btn btn-primary btn-sm" id="saltPost"> Post </btn>
+                <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results3" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
+
+              </div>
+              <!--Collapsed Data -->
+              <div class="collapse mt-2" id="results3">
+                <div class="card card-body">
+                  <ul class="list-group" id="saltList">
+                    <li class="list-group-item">Lemon Juice</li>
+                    <li class="list-group-item">Fresh herbs (rosemary, cilantro, basil, etc)</li>
+                    <li class="list-group-item">Ground Pepper or Red Pepper Flakes</li>
+                    <li class="list-group-item">Salt substitutes such as Potassium Chloride</li>
+                  </ul>
+                </div>
+              </div> <!-- end of collapsed Data -->
+          </div> <!-- End of row 4 -->
+
+          <div id="templatedQuestion">
+
+          </div>
+
+        </div> <!-- End of MyQuestions div-->
+      </div> <!-- Allcontent div-->
+
+<script id='entry-template1' type="text/x-handlebars-template">
+  <div class="form-group row mt-3">
+    <h4>{{title}} <span class="badge badge-primary">New</span></h4>
+  </div>
+  <div class="row">
+    <input type="answer" class="form-control" id="answer{{index}}" placeholder="Add Your Answer Here!">
+    <div class="mt-2" id="buttons">
+      <btn class="btn btn-primary btn-sm" id="newPost{{index}}"> Post </btn>
+      <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"data-target="#results{{index}}" aria-expanded="false" aria-controls="collapseExample"> See Results </button>
+    </div>
+    <!--Collapsed Data -->
+    <div class="collapse mt-2" id="results{{index}}">
+      <div class="card card-body">
+        <ul class="list-group" id="newList{{index}}">
+          <li id="noResponse{{index}}" class="list-group-item show">{{injectedResult1}}</li>
+
+        </ul>
+      </div>
+    </div> <!-- end of collapsed Data -->
+  </div><!-- End of row -->
+</script>
+
+
+      <script src="js/handlebars-v4.0.11.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/project.js"></script>
+    </body>
+
+  </body>
+  </html>
